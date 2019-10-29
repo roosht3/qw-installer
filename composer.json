@@ -6,7 +6,7 @@
         "psr-0": {"Dolphiq\\Composer": "src/"}
     },
     "extra": {
-        "class": "Dolphiq\\Composer\\TemplateInstallerPlugin"
+        "class": "Dolphiq\\Composer\\QoreWorksInstallerPlugin"
     },
     "require": {
         "composer-plugin-api": "^1.1"
