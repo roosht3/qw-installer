@@ -1,0 +1,17 @@
+{
+    "name": "dolphiq/qore-works",
+    "description": "Plugin installer for qore.works",
+    "type": "composer-plugin",
+    "require": {
+        "composer-plugin-api": "^1.1"
+    },
+    "require-dev": {
+        "composer/composer": "^1.9"
+    },
+    "authors": [
+        {
+            "name": "Rooshan Akthar",
+            "email": "rooshan@dolphiq.nl"
+        }
+    ]
+}
