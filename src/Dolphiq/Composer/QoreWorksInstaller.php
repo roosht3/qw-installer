@@ -12,10 +12,24 @@ class QoreWorksInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
-        $prefix = substr($package->getPrettyName(), 0, 23);
+
+        $prettyName = $this->package->getPrettyName();
+        $name = null;
+        $vendor = null;
+        if (strpos($prettyName, '/') !== false) {
+            list($vendor, $name) = explode('/', $prettyName);
+        } else {
+            $vendor = '';
+            $name = $prettyName;
+        }
+
+        $name = preg_replace('/-module$/', '', $name);
+        $name = str_replace(array('-', '_'), ' ', $name);
+        $name = str_replace(' ', '', ucwords($name));
+
         
 
-        return 'Modules/'.substr($package->getPrettyName(), 23);
+        return 'Modules/'.$name;
     }
 
     /**
