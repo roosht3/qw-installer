@@ -1,7 +1,13 @@
 {
-    "name": "dolphiq/qore-works",
+    "name": "rooshan/qore-works",
     "description": "Plugin installer for qore.works",
     "type": "composer-plugin",
+    "autoload": {
+        "psr-0": {"Dolphiq\\Composer": "src/"}
+    },
+    "extra": {
+        "class": "Dolphiq\\Composer\\TemplateInstallerPlugin"
+    },
     "require": {
         "composer-plugin-api": "^1.1"
     },
