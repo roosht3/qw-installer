@@ -13,7 +13,7 @@ class QoreWorksInstaller extends LibraryInstaller
     public function getInstallPath(PackageInterface $package)
     {
 
-        $prettyName = $this->package->getPrettyName();
+        $prettyName = $package->getPrettyName();
         $name = null;
         $vendor = null;
         if (strpos($prettyName, '/') !== false) {
